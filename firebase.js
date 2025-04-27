@@ -5,16 +5,17 @@ import { getFirestore } from "firebase/firestore";
 import { getStorage } from "firebase/storage";
 import { getFunctions } from "firebase/functions";
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import env from "env.json";
 
 // Your web app's Firebase configuration
 // Replace this with the config object from your Firebase console
 const firebaseConfig = {
-    apiKey: "AIzaSyDU8hB3qWD8VAgPinbHsGNSI7-9l1FHm2Y",
-    authDomain: "shoppinglist-v2-2d33b.firebaseapp.com",
-    projectId: "shoppinglist-v2-2d33b",
-    storageBucket: "shoppinglist-v2-2d33b.firebasestorage.app",
-    messagingSenderId: "990754613094",
-    appId: "1:990754613094:web:cecc7f2adddaa2d2918aa7"
+    apiKey: env.firebase.apiKey,
+    authDomain: env.firebase.authDomain,
+    projectId: env.firebase.projectId,
+    storageBucket: env.firebase.storageBucket,
+    messagingSenderId: env.firebase.messagingSenderId,
+    appId: env.firebase.appId
 };
 
 // Initialize Firebase
